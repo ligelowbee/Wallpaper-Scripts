@@ -22,9 +22,9 @@ if [ ! -e "$fname" ]; then
     # ask for smaller version
     curl -o "$fname" -s -L "http://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/$urlfname&width=1920&height=1090"
 
-    info="${fname//_/ }"
+    label="${fname//_/ }"
     eol=$'\n'
-    info="${info// - /$eol}"
+    label="${label// - /$eol}"
 
     width=1920
     height=1090
@@ -34,8 +34,8 @@ if [ ! -e "$fname" ]; then
     convert "$fname" -resize "$width"x"$height" -background Black \
             -gravity center -extent "$width"x"$height" \
             -font "Noto-Sans-Regular" -pointsize "$pts" \
-            -draw "gravity SouthEast fill black text 10,4 \"$info\"" \
-            -draw "gravity SouthEast fill white text 8,6 \"$info\"" \
+            -draw "gravity SouthEast fill black text 10,4 \"$label\"" \
+            -draw "gravity SouthEast fill white text 8,6 \"$label\"" \
             "labeled-$fname"
 
     if [ $? -eq 0 ]; then
@@ -45,6 +45,10 @@ if [ ! -e "$fname" ]; then
         exit
     fi
 fi
-IMM="$artd/$fname"
-PROP=/backdrop/screen0/monitoreDP/workspace0/last-image
-xfconf-query --channel xfce4-desktop --property $PROP --set $IMM
+
+IMM="$HOME/Desktop/wallpaper.jpg"
+ln -s -f "$artd/$fname" "$IMM"
+for monitor in $(xrandr --listactivemonitors|awk 'NR>1 {print $NF}'); do
+    PROP="/backdrop/screen0/monitor$monitor/workspace0/last-image"
+    xfconf-query --channel xfce4-desktop --property "$PROP" --set "$IMM"
+done
