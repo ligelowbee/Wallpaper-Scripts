@@ -1,4 +1,4 @@
-`label-wallpaper.sh` resizes and labels images for wallpaper using `imagemagick`. Resizes to 1920x180 keeping aspect and padding with black, adds a 20pt drop shadowed label to the bottom right with Ubuntu font.
+`label-wallpaper.sh` resizes and labels images for wallpaper using `imagemagick`. Resizes to 1920x180 keeping aspect and padding with black, adds a 20pt drop shadowed label to the bottom right using the Ubuntu font.
 
 `cinnamon-set-wallpaper.sh` sets an image as wallpaper in linux mint cinnamon.
 
