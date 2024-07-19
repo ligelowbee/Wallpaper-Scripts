@@ -6,4 +6,4 @@
 
 `google-art-wallpaper.sh` uses `curl` to fetch a random art image from wikimedia's google arts collection. Then uses above scripts to label and set as wallpaper.
 
-`my-wallpaper.sh` choses to use already downloaded art (or book covers), or to fetch fresh art, and uses above scripts to set wallpaper.
+`my-wallpaper.sh` sets wallpaper using either already downloaded art (inc. book covers) or fetches fresh art. Basically rolls the dices to what kind of wallpaper it will be today. Uses above scripts to do everything.
