@@ -24,6 +24,7 @@ while getopts ":ho:l:" opt; do
 done
 shift $(( OPTIND - 1 ))
 
+err=0
 while [ -e "$1" ]; do
     infile="$1"
     fbase=$(basename "$infile")
@@ -65,7 +66,9 @@ while [ -e "$1" ]; do
         echo "Created: $outfile"
     else
         echo "!!! Error labeling: $infile"
+        err=1
     fi
     shift
     unset infile fbase outfile label
 done
+exit $err
