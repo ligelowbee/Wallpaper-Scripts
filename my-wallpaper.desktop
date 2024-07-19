@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.1
+Type=Application
+Name=My Wallpaper
+Comment=Set wallpaper to random Google Art or Calibre Cover
+Icon=emblem-photos
+Exec=my-wallpaper.sh
+Categories=DesktopSettings;Settings;
+Terminal=false
+StartupNotify=false
+PrefersNonDefaultGPU=false
