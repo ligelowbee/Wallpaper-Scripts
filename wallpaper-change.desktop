@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.1
+Type=Application
+Name=Wallpaper Change
+Comment=Change wallpaper to random Google Art or Calibre Cover
+Icon=emblem-photos
+Exec=wallpaper-change.sh
+Categories=DesktopSettings;Settings;
+Terminal=false
+StartupNotify=false
+PrefersNonDefaultGPU=false
