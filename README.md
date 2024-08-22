@@ -1,9 +1,9 @@
-`label-wallpaper.sh` resizes and labels images for wallpaper using `imagemagick`. Resizes to 1920x180 keeping aspect and padding with black, adds a 20pt drop shadowed label to the bottom right using the Ubuntu font.
+`wallpaper-label.sh` resizes and labels images for use as wallpaper. Uses `imagemagick`. Resizes to 1920x180 keeping aspect, padding with black, adds a 20pt drop shadowed label to the bottom right using the Ubuntu font.
 
-`cinnamon-set-wallpaper.sh` sets an image as wallpaper in linux mint cinnamon.
+`wallpaper-set.sh` sets an image as wallpaper (for gnome, adjust as needed for other desktops).
 
-`calibre-cover-wallpaper.sh` selects a random cover image from my calibre library and uses above scripts to label and set as wallpaper.
+`wallpaper-cover.sh` selects a random cover image from my calibre library and uses above scripts to label and set as wallpaper.
 
-`google-art-wallpaper.sh` uses `curl` to fetch a random art image from wikimedia's google arts collection. Then uses above scripts to label and set as wallpaper.
+`wallpaper-google-art.sh` uses `curl` to fetch a random art image from wikimedia's google arts collection. Then uses above scripts to label and set as wallpaper.
 
-`my-wallpaper.sh` sets wallpaper using either already downloaded art (inc. book covers) or fetches fresh art. Basically rolls the dices to what kind of wallpaper it will be today. Uses above scripts to do everything.
+`wallpaper-change.sh` changes wallpaper to either some fresh google art, already fetched google art, or a calibre book cover. Uses above scripts to do everything.
