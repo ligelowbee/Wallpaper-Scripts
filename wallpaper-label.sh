@@ -1,5 +1,6 @@
 #!/bin/bash
-# label-wallpaper.sh
+# wallpaper-label.sh
+# Label and resize and image for use as wallpaper
 usage() {
     cat <<EOF
 Usage: label-wallpaper.sh [-h] [-o OUTFILE] [-l LABEL] INFILE

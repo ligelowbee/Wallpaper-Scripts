@@ -1,4 +1,8 @@
 #!/bin/bash
+# wallpaper-set.sh
+# Set wallpaper to given image file.
+# Adjust as need for desktop platform.
+
 fname="$1"
 if [ ! -e "$1" ]; then
     echo "Usage: ${0##*/} IMAGE_PATH"

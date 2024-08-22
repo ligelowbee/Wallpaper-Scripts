@@ -1,5 +1,6 @@
 #!/bin/bash
-#Make labeled wallpaper from calibre covers
+# wallpaper-calibre.sh
+# Make a labeled wallpaper from a calibre cover
 calibred="$HOME/Ebooks/calibre"
 artd="$HOME/Pictures/Wallpaper/"
 origc=$(find "$calibred" -name "cover.jpg" | shuf -n1)

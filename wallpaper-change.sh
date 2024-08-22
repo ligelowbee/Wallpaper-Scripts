@@ -1,8 +1,6 @@
 #!/bin/bash
-# google-art-wallpaper.sh should only fetch from wikimedia.
-# calibre-cover-wallpaper.sh should only fetch from calibre covers.
-# use this file to pick a local, google, or calibre.
-
+# wallpaper-change.sh
+# Set wall paper as either calibre cover, google art, or random existing image.
 artd="$HOME/Pictures/Wallpaper"
 
 if (( RANDOM % 2 )); then 
