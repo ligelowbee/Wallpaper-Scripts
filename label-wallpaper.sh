@@ -14,11 +14,9 @@ EOF
 
 while getopts ":ho:l:" opt; do
     case $opt in
-        -h) usage ;;
-        -o) outfile="$OPTARG"
-            shift ;;
-        -l) label="$OPTARG"
-            shift ;;
+        h) usage ;;
+        o) outfile="$OPTARG" ;;
+        l) label="$OPTARG" ;;
         *) usage ;;
     esac
 done
@@ -32,8 +30,10 @@ while [ -e "$1" ]; do
         outfile="labeled-${fbase}"
     fi
 
-    # Generate label from filename
-    if [ -z "$label" ]; then
+    # Generate label
+    if [ -n "$label" ]; then
+        echo "Using label: $label"
+    else
         label="${fbase%.*}"
         # underscore to space
         label="${label//_/ }"
@@ -44,6 +44,7 @@ while [ -e "$1" ]; do
         # remove unwanted info
         label="${label/ - Google Art Project/}"
         label="${label/ - Google Arts & Culture/}"
+        label="${label#Calibre -}"
         # dashes to newline
         eol=$'\n'
         label="${label// - /$eol}"
