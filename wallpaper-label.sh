@@ -38,14 +38,16 @@ while [ -e "$1" ]; do
         label="${fbase%.*}"
         # underscore to space
         label="${label//_/ }"
-        # replace m-dash
+        # replace system marks with safe utf8 versions 
+        label="${label//\'/’}"
+        label="${label//\"/”}"
+        label="${label//\&/＆}"
+        # replace m-dash and n-dash
         label="${label//—/-}"
-        # replace n-dash
         label="${label//–/-}"
         # remove unwanted info
-        label="${label/ - Google Art Project/}"
-        label="${label/ - Google Arts & Culture/}"
-        label="${label#Calibre -}"
+        label="${label/ - Google Art Project*/}"
+        label="${label/ - Google Arts ＆ Culture*/}"
         # dashes to newline
         eol=$'\n'
         label="${label// - /$eol}"
@@ -57,9 +59,9 @@ while [ -e "$1" ]; do
 
     echo "Resizing and labeling: $infile"
     ## Resize to width x height with black borders and label
-    convert "$infile" -resize "$width"x"$height" -background Black \
+    magick "$infile" -resize "$width"x"$height" -background Black \
             -gravity center -extent "$width"x"$height" \
-            -font "Ubuntu" -pointsize "$pts" \
+            -font "Noto-Sans-Regular" -pointsize "$pts" \
             -draw "gravity SouthEast fill black text 10,4 \"$label\"" \
             -draw "gravity SouthEast fill white text 8,6 \"$label\"" \
             "$outfile"
