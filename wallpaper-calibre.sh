@@ -1,6 +1,7 @@
 #!/bin/bash
 # wallpaper-calibre.sh
 # Make a labeled wallpaper from a calibre cover
+# Uses awk to process path into a nice label
 
 calibred="$HOME/Ebooks/calibre"
 artd="$HOME/Pictures/Wallpaper/"

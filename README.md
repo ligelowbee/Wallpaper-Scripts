@@ -8,4 +8,4 @@
 
 `wallpaper-change.sh` Uses above scripts to change current wallpaper to one of: fresh google art, already fetched google art, or a calibre ebook cover. 
 
-`wallpaper-relabel-google-art.sh` will redownload and relabel a google-art image. Optionaly using `translate-shell` to translate filename to english.
+`wallpaper-relabel-google-art.sh` will redownload and relabel a google-art image. Optionaly using `translate-shell` to translate filename to an english label and filename.
