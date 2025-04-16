@@ -2,7 +2,7 @@
 
 `wallpaper-set.sh` sets an image as wallpaper. Trys to use the right tool for the current desktop.
 
-`wallpaper-cover.sh` selects a random cover image from my calibre library and uses above scripts to label and set as wallpaper.
+`wallpaper-calibre.sh` selects a random cover image from my calibre library and uses above scripts to label and set as wallpaper.
 
 `wallpaper-google-art.sh` uses `curl` to fetch a random art image from wikimedia's google arts collection. Then uses above scripts to label and set as wallpaper.
 
