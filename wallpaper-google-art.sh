@@ -9,7 +9,7 @@ if [ "$1" == "-h" ]; then
     exit
 fi
 
-artd="$HOME/Pictures/Wallpaper"
+artd="$HOME/Pictures/Wallpaper-Google-Art"
 mkdir -p "$artd"
 cd "$artd"
 

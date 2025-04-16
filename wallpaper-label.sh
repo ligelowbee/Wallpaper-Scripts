@@ -3,7 +3,7 @@
 # Label and resize and image for use as wallpaper
 usage() {
     cat <<EOF
-Usage: label-wallpaper.sh [-h] [-o OUTFILE] [-l LABEL] INFILE
+Usage: wallpaper-label.sh [-h] [-o OUTFILE] [-l LABEL] INFILE
     If no OUTFILE given will use: labeled-INFILE
     If no LABEL string given info from the INFILE filename
         (eg: artist_name - title_of_picture.jpg)

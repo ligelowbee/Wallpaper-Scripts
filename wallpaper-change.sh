@@ -9,14 +9,17 @@ fi
 
 # half the time use a local existing file
 if (( RANDOM % 2 )); then 
+    fname=$(find -L "$artd" -type f | shuf -n1)
+    echo "Using existing file: $fname" 
+    exec wallpaper-set.sh "$fname"
     # a third of those times pick a book cover (true when 0)
-    if ! (( RANDOM % 3 )); then 
-        exec wallpaper-calibre.sh
-    else
-        fname=$(ls -1 "$artd" | shuf -n1)
-        echo "Using existing file: $fname" 
-        exec wallpaper-set.sh "$artd/$fname"
-    fi
+    # if ! (( RANDOM % 3 )); then 
+    #     exec wallpaper-calibre.sh
+    # else
+    #     fname=$(ls -1 "$artd" | shuf -n1)
+    #     echo "Using existing file: $fname" 
+    #     exec wallpaper-set.sh "$artd/$fname"
+    # fi
 else
     exec wallpaper-google-art.sh
 fi
